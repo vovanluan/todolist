@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="todoCtrl">
+<!--     <div style="width: 100%;">
+   <div style="float:left; width: 40%">
+        <div class="header">
+            <h2>My To Do List</h2>
+            <input type="text" ng-model="newCategory" placeholder="Title...">
+            <span ng-click="addCategory()" class="addBtn">Add new category</span>
+        </div>
+        <ul ng-repeat = "category in categories" id="list_cat">
+            <li ng-click="chooseCategory(category)">{{category.name}}</li>
+        </ul>
+   </div>
+   <div style="float:right;">
+        <div class="input-group">
+            <input id="task_title" type="text" ng-model="title" placeholder="Title...">
+            <input id="task_description" type="text" ng-model="description" placeholder="Description...">
+            <span ng-click="addTask()" class="addBtn">Add task</span>
+        </div>
+        <div id="bottom">
+            <ul ng-repeat="task in tasks">
+                <li>
+                    <span>Title:{{task.title}}</span>
+                    <p>Description:{{task.description}}</p>
+                    <p>created at: {{task.createdAt}}</p>
+                </li>
+            </ul>
+        </div>
+   </div>
+</div> -->
+    <div style="width:40%; height:100%; float:left">
+        <div class="header">
+            <h2>My To Do List</h2>
+            <input type="text" ng-model="newCategory" placeholder="Title...">
+            <span ng-click="addCategory()" class="addBtn">Add new category</span>
+        </div>
+        <div style="height:50%; float:left">
+            <ul ng-repeat = "category in categories" id="list_cat" style="width:100%;">
+                <li ng-click="chooseCategory(category)">{{category.name}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background-color:blue; width:60%; height:100%; float:right">
+        <div class="upper header">
+            <input id="task_title" type="text" ng-model="title" placeholder="Title...">
+            <input id="task_description" type="text" ng-model="description" placeholder="Description...">
+            <span ng-click="addTask()" class="addBtn">Add task</span>
+        </div>
+        <div class="lower">
+            <ul ng-repeat="task in tasks">
+                <li>
+                    <span>Title:{{task.title}}</span>
+                    <p>Description:{{task.description}}</p>
+                    <p>created at: {{task.createdAt}}</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div style="background-color:orange; width:50%; height:50%; float:right">
+
+    </div>
+</body>
+</html>
