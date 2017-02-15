@@ -1,0 +1,7 @@
+entity\Category.class
+service\ApplicationConfig.class
+service\ToDoItemFacadeREST.class
+support\CORSResponseFilter.class
+entity\ToDoItem.class
+service\AbstractFacade.class
+service\CategoryFacadeREST.class
